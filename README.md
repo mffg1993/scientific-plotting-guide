@@ -19,6 +19,10 @@ The collection is inspired by common challenges in optics and photonics research
 
 ## 📂 Structure
 
+### 1. Python
+
+### 2. Mathematica
+
 ---
 
 ## 🖌️ Example Topics
