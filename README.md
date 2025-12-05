@@ -1,12 +1,12 @@
 # Scientific Plotting Guide — Mathematica & Python
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Mathematica-12.0+-red?logo=wolfram-mathematica&logoColor=white" alt="Mathematica">
-  <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT">
-  <img src="https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter&logoColor=white" alt="Jupyter">
-  <img src="https://img.shields.io/github/last-commit/<your-username>/scientific-plotting-guide?color=yellow" alt="Last Commit">
-  <img src="https://img.shields.io/github/stars/<your-username>/scientific-plotting-guide?style=social" alt="GitHub Stars">
+  <img src="https://img.shields.io/badge/Mathematica-12.0%2B-red?logo=wolfram-mathematica&logoColor=white" alt="Mathematica Badge">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white" alt="Python Badge">
+  <img src="https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter&logoColor=white" alt="Jupyter Badge">
+  <a href="https://creativecommons.org/licenses/by/4.0/">
+    <img src="https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg" alt="License: CC BY 4.0">
+  </a>
 </p>
 
 This repository provides a comprehensive and practical guide to producing publication-quality scientific figures using both Mathematica and Python (Matplotlib, Seaborn).
