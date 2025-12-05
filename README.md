@@ -4,8 +4,8 @@
   <img src="https://img.shields.io/badge/Mathematica-12.0%2B-red?logo=wolfram-mathematica&logoColor=white" alt="Mathematica Badge">
   <img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white" alt="Python Badge">
   <img src="https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter&logoColor=white" alt="Jupyter Badge">
-  <a href="https://creativecommons.org/licenses/by/4.0/">
-    <img src="https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg" alt="License: CC BY 4.0">
+  <a href="https://www.gnu.org/licenses/gpl-3.0">
+    <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3">
   </a>
 </p>
 
@@ -47,8 +47,8 @@ The structure and recommendations draw upon insights from:
 
 ## 🧾 Citation & License
 
-If you find this guide useful, please reference or link it in your own repositories and figure guidelines.  
-All content is released under the [**Creative Commons Attribution 4.0 International (CC BY-4.0)**](https://creativecommons.org/licenses/by/4.0/) license — feel free to reuse and adapt with attribution.
+If you find this guide useful, please reference or link it in your own repositories and figure preparation workflows.  
+All materials are released under the [**GNU General Public License v3.0 (GPL-3.0)**](https://www.gnu.org/licenses/gpl-3.0), which permits use, modification, and redistribution of this content under the same license terms.
 
 ---
 
