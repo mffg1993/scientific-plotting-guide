@@ -8,22 +8,68 @@ This folder collects all supplementary materials that support consistent, public
 
 Color is one of the most powerful yet misused elements in scientific visualization. Proper use enhances clarity, reproducibility, and inclusivity. This section consolidates guidelines for designing color-robust and perception-accurate figures.
 
-### 🌈 1.1 Why Color Matters? 
-- **Visual clarity:** Enhances perception of trends and contrasts.
-- **Scientific accuracy:** Encodes data meaning quantitatively, not decoratively.
-- **Accessibility:** Roughly 8 % of men and 0.5 % of women have some form of color-vision deficiency.
-- **Print reproducibility:** Some journals still print in grayscale — figures must survive desaturation.
+### 🌈 **1.1 Why Color Matters**
 
-### 🎨 1.2 Recommended Colormaps
+A well-designed plot should be immediately understandable. Each dataset or data point must be **visually distinguishable**, guiding the reader’s eye toward the key findings.  
+The thoughtful use of a color palette not only improves the aesthetic appeal of a figure, but also serves as a **powerful visual aid** to emphasize patterns, trends, and contrasts in your results.  
 
-| Purpose | Recommended Colormap | Notes |
-|----------|----------------------|-------|
-| Sequential | **Viridis**, **Cividis**, **Plasma** | Perceptually uniform, grayscale-friendly |
-| Diverging | **Coolwarm**, **RdBu**, **Balance** | Centered on zero or mean value |
-| Categorical | **Okabe–Ito**, **Tableau 10**, **Set2** | Distinct hues, color-blind safe |
-| Cyclic | **Twilight**, **Phase**, **HSV (modified)** | Smooth wrapping at endpoints |
+When selecting colors, remember that **clarity and accessibility are as important as beauty**. A good palette communicates information effectively to *everyone*, including readers with color-vision deficiencies or those viewing the figure in grayscale.  
 
-🚫 *Avoid* outdated colormaps (`jet`, `rainbow`) which distort numerical perception.
+Key aspects to consider:
+
+- **Visual clarity:** Colors should make it easy to perceive differences and trends at a glance.  
+- **Scientific accuracy:** Use color to represent data meaningfully, not decoratively.  
+- **Accessibility:** Around 8 % of men and 0.5 % of women experience color-vision deficiencies — avoid relying solely on hue to convey information.  
+- **Print reproducibility:** Many journals or print copies render in grayscale; ensure distinctions remain visible when colors are removed.  
+
+### 🎨 **1.2 Recommended Colormaps for Optics+Photonics Figures**
+
+In photonics, color is not only aesthetic — it carries **quantitative meaning**. Choosing the right colormap ensures that your figures remain **physically interpretable**, even under color-blind simulation, grayscale reproduction, or projection.
+
+The following guidelines highlight colormaps suitable for typical photonics data:
+
+| Application | Description | Type | Matplotlib Colormap | Mathematica Colormap | Notes |
+|--------------|-------------|------|--------------------|----------------------|-------|
+| **Intensity distributions** (beam profiles, CCD images) | Used for spatial light intensity or power maps in near/far field measurements. | Sequential | `viridis`, `cividis`, `inferno` | `"Cividis"`, `"DeepSeaColors"`, `"SolarColors"` | Perceptually uniform; suitable for linear or log scaling. |
+| **Spectra and wavelength-dependent plots** | Ideal for spectral power density, transmission/reflection spectra, or dispersion maps. | Sequential | `plasma`, `turbo`, `parula` | `"AvocadoColors"`, `"Rainbow"` (modified), `"SunsetColors"` | Smooth color transitions preserving neighbor contrast. |
+| **Phase or interference patterns** | Represents optical phase (0–2π), interferograms, or holographic reconstructions. | Cyclic | `twilight`, `phase`, `hsv` (modified) | `"Hue"`, `"PhaseColors"`, `"TwilightColors"` | Cyclic colormaps wrap continuously from 0 → 2π. |
+| **Diverging quantities** (Δn, reflectivity change, difference maps) | For signed data centered on a neutral baseline (e.g., phase shift or refractive index variation). | Diverging | `coolwarm`, `RdBu`, `balance` | `"RedBlueTones"`, `"TemperatureMap"` | Highlights both positive and negative deviations. |
+| **Categorical data** (polarizations, samples, materials) | For discrete labels like TE/TM polarization, device types, or materials. | Qualitative | `tab10`, `Set2`, `Paired` | `"AquaticColors"`, `"IslandColors"`, `"Pastel"` | Discrete, color-blind-safe hues for clear group separation. |
+
+⚠️ *Avoid* legacy colormaps such as `Jet` or `Rainbow`.  
+These distort perceived intensity, exaggerate contrast in mid-ranges, and may introduce non-existent “features” in continuous datasets.
+
+---
+
+#### 🧠 Practical Notes for Photonics
+- **Phase plots:** Always use cyclic colormaps to avoid artificial discontinuities at 0/2π boundaries.  
+- **Spectral data:** When mapping wavelength, remember that perceived hue ≠ physical wavelength — choose palettes that remain monotonic in luminance.  
+- **Beam profiles:** For publication clarity, overlay contour lines or normalization ticks instead of relying purely on color brightness.  
+- **Logarithmic intensity maps:** Prefer `Inferno` or `Cividis` — both preserve detail in dark regions, unlike `Viridis`, which compresses near-zero values.  
+
+---
+
+#### 🧩 Implementation Examples
+
+**Matplotlib (Python):**
+```python
+import matplotlib.pyplot as plt
+plt.imshow(beam_profile, cmap='inferno', origin='lower')
+plt.colorbar(label='Normalized Intensity')
+plt.xlabel('x (μm)')
+plt.ylabel('y (μm)')
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
 
 ### ♿ 1.3 Designing for Color-Blind Accessibility
 1. **Simulate impairments:**  
