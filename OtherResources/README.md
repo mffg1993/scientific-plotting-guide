@@ -5,8 +5,45 @@ This folder collects all supplementary materials that support consistent, public
 ---
 
 ## 🎨 Color and Accessibility
-- **[ColorGuide.md](ColorGuide.md)** — explains color theory for scientific figures, perceptual colormaps, and color-blind-safe palettes.
-- Includes references to standard palettes (Viridis, Cividis, ColorBrewer, etc.) and best practices for contrast and background choice.
+
+## 🎨 1. Color and Accessibility
+
+Color is one of the most powerful yet misused elements in scientific visualization. Proper use enhances clarity, reproducibility, and inclusivity. This section consolidates guidelines for designing color-robust and perception-accurate figures.
+
+---
+
+### 🌈 1.1 Why Color Matters
+- **Visual clarity:** Enhances perception of trends and contrasts.
+- **Scientific accuracy:** Encodes data meaning quantitatively, not decoratively.
+- **Accessibility:** Roughly 8 % of men and 0.5 % of women have some form of color-vision deficiency.
+- **Print reproducibility:** Some journals still print in grayscale — figures must survive desaturation.
+
+---
+
+### 🎨 1.2 Recommended Colormaps
+
+| Purpose | Recommended Colormap | Notes |
+|----------|----------------------|-------|
+| Sequential | **Viridis**, **Cividis**, **Plasma** | Perceptually uniform, grayscale-friendly |
+| Diverging | **Coolwarm**, **RdBu**, **Balance** | Centered on zero or mean value |
+| Categorical | **Okabe–Ito**, **Tableau 10**, **Set2** | Distinct hues, color-blind safe |
+| Cyclic | **Twilight**, **Phase**, **HSV (modified)** | Smooth wrapping at endpoints |
+
+🚫 *Avoid* outdated colormaps (`jet`, `rainbow`) which distort numerical perception.
+
+---
+
+### ♿ 1.3 Designing for Color-Blind Accessibility
+1. **Simulate impairments:**  
+   - [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/)  
+   - [Color Oracle](https://colororacle.org/)
+2. **Verify grayscale readability.**
+3. **Use redundant cues:** markers, line styles, or text labels.
+4. **Adopt the Okabe–Ito palette** (color-universal design):
+
+### Resources
+- **[Scientific Colormaps](https://s-ink.org/scientific-colour-maps)**
+
 
 ---
 
@@ -21,12 +58,10 @@ This folder collects all supplementary materials that support consistent, public
 ---
 
 ## 🔗 Additional References
-- **[Scientific Colormaps](https://s-ink.org/scientific-colour-maps)d)** — curated links to:
-  - Scientific plotting standards (Nature, Optica, IEEE)
-  - Open colormap repositories
-  - Accessibility guidelines
-  - Useful software tools (e.g. Inkscape, ImageMagick)
-
+- **[Scientific Colormaps](https://s-ink.org/scientific-colour-maps)**
+- **[Scientific Visualization: Python + Matplotlib by Nicolas P. Rougier](https://github.com/rougier/scientific-visualization-book)**
+- **[InkScape](https://inkscape.org/)**
+- 
 ---
 
 ## ✏️ Contributing
