@@ -1,9 +1,43 @@
-# 📚 Resources for Scientific Plotting
+# 🚀 A Fast Guide to Scientific Figures
 
-This folder collects all supplementary materials that support consistent, publication-quality figure design across different platforms (Mathematica, Python, etc.).
+ **A concise, practical reference for creating clear, consistent, and accessible scientific figures.**  This guide summarizes best practices for color use, typography, accessibility, multi-panel layouts, and export standards — based on principles from leading journals and visualization research.
 
 ---
+<details>
+<summary><b>📖 Table of Contents</b> (click to expand)</summary>
 
+<br>
+
+1. [🎨 Color and Accessibility](#-1-color-and-accessibility)  
+   - [🌈 1.1 Why Color Matters](#-11-why-color-matters)  
+   - [🎨 1.2 Recommended Colormaps for Photonics Figures](#-12-recommended-colormaps-for-photonics-figures)  
+   - [🧭 Types of Colormaps](#-types-of-colormaps)  
+   - [♿ 1.3 Designing for Color-Blind Accessibility](#-13-designing-for-color-blind-accessibility)  
+   - [📏 Line and Marker Styles](#-line-and-marker-styles)  
+
+2. [✏️ 2. Figure Preparation: Fonts, Axes, and Labels](#️-2-figure-preparation-fonts-axes-and-labels)  
+
+3. [💾 3. Export and File Formats](#-3-export-and-file-formats)  
+   - [🧱 3.1 Vector vs. Raster Formats](#-31-vector-vs-raster-formats)  
+   - [🖼️ 3.2 Resolution and Scaling](#-32-resolution-and-scaling)  
+   - [🌈 3.3 Color Modes and Contrast](#-33-color-modes-and-contrast)  
+   - [🧩 3.4 File Naming and Organization](#-34-file-naming-and-organization)  
+   - [🧠 3.5 Quick Checklist](#-35-quick-checklist)  
+   - [⚙️ 3.6 Suggested Export Settings](#-36-suggested-export-settings)  
+
+4. [🧩 4. Multi-Panel Figure Layout and Composition](#-4-multi-panel-figure-layout-and-composition)  
+   - [🧱 4.1 Layout and Alignment](#-41-layout-and-alignment)  
+   - [🔠 4.2 Panel Labeling](#-42-panel-labeling)  
+   - [🧭 4.3 Consistency Across Panels](#-43-consistency-across-panels)  
+   - [⚙️ 4.4 Scaling and Space Management](#-44-scaling-and-space-management)  
+   - [📐 4.5 Practical Tools](#-45-practical-tools)  
+   - [🧠 4.6 Quick Checklist](#-46-quick-checklist)  
+
+5. [🔗 5. Related Resources](#-5-related-resources)  
+
+</details>
+
+---
 ## 🎨 1. Color and Accessibility
 
 Color is one of the most powerful yet misused elements in scientific visualization. Proper use enhances clarity, reproducibility, and inclusivity. This section consolidates guidelines for designing color-robust and perception-accurate figures.
