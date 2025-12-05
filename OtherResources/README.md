@@ -20,25 +20,41 @@ Key aspects to consider:
 - **Visual clarity:** Colors should make it easy to perceive differences and trends at a glance.  
 - **Scientific accuracy:** Use color to represent data meaningfully, not decoratively.  
 - **Accessibility:** Around 8 % of men and 0.5 % of women experience color-vision deficiencies — avoid relying solely on hue to convey information.  
-- **Print reproducibility:** Many journals or print copies render in grayscale; ensure distinctions remain visible when colors are removed.  
+- **Print reproducibility:** Many journals or print copies render in grayscale; ensure distinctions remain visible when colors are removed.
+
+Selecting an appropriate colormap starts with understanding the **structure of the data** being visualized.  
+Different datasets convey different relationships — some vary smoothly from low to high values, others oscillate periodically, and some contain distinct, unordered categories.  
+Recognizing these patterns is the first step toward assigning color meaningfully, ensuring that the visualization conveys both the data’s **quantitative range** and its **conceptual structure** rather than simply adding decoration.
+
+**Choosing the Right Colormap Type**
+
+| Data Property | Question to Ask | Recommended Type |
+|----------------|-----------------|------------------|
+| **Ordered values** | Does your data progress from low → high without wrapping or sign changes? | **Sequential** |  
+| **Centered around a reference** | Do values diverge around a zero or mean (±)? | **Diverging**  |
+| **Periodic or angular** | Do values wrap cyclically (e.g., 0 = 2π)? | **Cyclic** | 
+| **Multiple sub-ranges** | Are there two or more ordered segments with distinct meanings? | **Multi-sequential** | 
+| **Discrete categories** | Are data groups independent with no numeric order? | **Qualitative / Categorical** | 
+
+💡 *Once you know the type, choose the palette based on your figure background (light or dark) and whether low-amplitude variations must remain visible.*
+
 
 ### 🎨 **1.2 Recommended Colormaps for Optics+Photonics Figures**
 
 In photonics, color is not only aesthetic — it carries **quantitative meaning**. Choosing the right colormap ensures that your figures remain **physically interpretable**, even under color-blind simulation, grayscale reproduction, or projection.
 
-The following guidelines highlight colormaps suitable for typical photonics data:
+These recommendations cover colormaps that are well suited for the most common types of photonics figures.  They provide a reliable foundation for representing quantities such as intensity, phase, and spectral information in a clear and reproducible way. 
+
 
 | Application | Description | Type | Matplotlib Colormap | Mathematica Colormap | Notes |
 |--------------|-------------|------|--------------------|----------------------|-------|
-| **Intensity distributions** (beam profiles, CCD images) | Used for spatial light intensity or power maps in near/far field measurements. | Sequential | `viridis`, `cividis`, `inferno` | `"Cividis"`, `"DeepSeaColors"`, `"SolarColors"` | Perceptually uniform; suitable for linear or log scaling. |
-| **Spectra and wavelength-dependent plots** | Ideal for spectral power density, transmission/reflection spectra, or dispersion maps. | Sequential | `plasma`, `turbo`, `parula` | `"AvocadoColors"`, `"Rainbow"` (modified), `"SunsetColors"` | Smooth color transitions preserving neighbor contrast. |
-| **Phase or interference patterns** | Represents optical phase (0–2π), interferograms, or holographic reconstructions. | Cyclic | `twilight`, `phase`, `hsv` (modified) | `"Hue"`, `"PhaseColors"`, `"TwilightColors"` | Cyclic colormaps wrap continuously from 0 → 2π. |
+| **Amplitude/Intensity distributions**  | Used for spatial light intensity or power maps in near/far field measurements, such as beam profiles, CCD images. | Sequential | `viridis`, `cividis`, `inferno` | `"Cividis"`, `"DeepSeaColors"`, `"SolarColors"` | Perceptually uniform; suitable for linear or log scaling. |
+| **Phase distribution** | Represents optical phase (0–2π), or holographic reconstructions. | Cyclic | `twilight`, `phase`, `hsv` (modified) | `"Hue"`, `"PhaseColors"`, `"TwilightColors"` | Cyclic colormaps wrap continuously from 0 → 2π. |
+| **Variable-dependent plots** | Ideal for spectral power density, transmission/reflection spectra, or dispersion maps for multiple samples.| Qualitative Categorical  | `plasma`, `turbo`, `parula` | `"AvocadoColors"`, `"Rainbow"` (modified), `"SunsetColors"` | Smooth color transitions preserving neighbor contrast. |
 | **Diverging quantities** (Δn, reflectivity change, difference maps) | For signed data centered on a neutral baseline (e.g., phase shift or refractive index variation). | Diverging | `coolwarm`, `RdBu`, `balance` | `"RedBlueTones"`, `"TemperatureMap"` | Highlights both positive and negative deviations. |
 | **Categorical data** (polarizations, samples, materials) | For discrete labels like TE/TM polarization, device types, or materials. | Qualitative | `tab10`, `Set2`, `Paired` | `"AquaticColors"`, `"IslandColors"`, `"Pastel"` | Discrete, color-blind-safe hues for clear group separation. |
 
-⚠️ *Avoid* legacy colormaps such as `Jet` or `Rainbow`.  
-These distort perceived intensity, exaggerate contrast in mid-ranges, and may introduce non-existent “features” in continuous datasets.
-
+For more complex visualizations — including phase–amplitude overlays, polarization-resolved fields, or multidimensional datasets — customized or composite palettes can be developed by combining cyclic and sequential schemes to capture all relevant parameters.
 ---
 
 #### 🧠 Practical Notes for Photonics
