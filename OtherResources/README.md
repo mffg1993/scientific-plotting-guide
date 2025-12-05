@@ -21,7 +21,7 @@ This folder collects all supplementary materials that support consistent, public
 ---
 
 ## 🔗 Additional References
-- **[ReferenceLinks.md](ReferenceLinks.md)** — curated links to:
+- **[Scientific Colormaps](https://s-ink.org/scientific-colour-maps)d)** — curated links to:
   - Scientific plotting standards (Nature, Optica, IEEE)
   - Open colormap repositories
   - Accessibility guidelines
