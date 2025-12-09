@@ -29,13 +29,21 @@ The collection is inspired by common challenges in optics and photonics research
 ## 📂 Structure
 
 ### 1. Scientific Figure Checklist ✅
+A quick-reference checklist summarizing the essential steps to create clear, accurate, and publication-ready scientific figures.  
+Use it before submitting or presenting your plots.
 
 ### 2. Guide for Scientific Figures 
+A detailed walkthrough of best practices for designing, labeling, and formatting scientific plots.  
+Includes color accessibility guidelines, typographic standards, and visual consistency tips.
+
 
 ### 3. Template for figures in Python 
+Ready-to-use Python (Matplotlib) template for generating clean, consistent, and color-blind-safe plots.  
+Includes base styles, recommended fonts, and example scripts for line, bar, and scatter plots.
 
 ### 4. Template for figures in Mathematica
-
+Mathematica notebook template for high-quality figure creation with adjustable styling presets.  
+Demonstrates axis formatting, color functions, legends, and export settings for publication-ready graphics.
 
 ---
 
