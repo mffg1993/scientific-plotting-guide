@@ -1,6 +1,7 @@
 # Python Figure Templates
 
 This folder contains Python scripts and notebooks that demonstrate how to create **publication-quality scientific figures** using libraries such as **Matplotlib** and **NumPy**.  
+
 All templates follow the visual and accessibility guidelines described in the main [Fast Guide to Scientific Figures](../FastGuideToScientificFigures.md).
 
 ---
