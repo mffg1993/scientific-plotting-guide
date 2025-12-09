@@ -28,9 +28,14 @@ The collection is inspired by common challenges in optics and photonics research
 
 ## 📂 Structure
 
-### 1. Python
+### 1. Scientific Figure Checklist ✅
 
-### 2. Mathematica
+### 2. Guide for Scientific Figures 
+
+### 3. Template for figures in Python 
+
+### 4. Template for figures in Mathematica
+
 
 ---
 
