@@ -2,6 +2,10 @@
 
 This folder contains Mathematica notebooks and scripts to help you generate publication-quality scientific figures using the Wolfram Mathematica environment.  
 
+All templates follow the visual and accessibility guidelines described in the main [Fast Guide to Scientific Figures](../FastGuideToScientificFigures.md).
+
+---
+
 ## 📄 Contents
 
 | File / Sub-folder | Description |
